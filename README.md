@@ -19,10 +19,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Femke van Brussel
 
   #### Je startniveau:
-  Blauw (kies uit zwart, rood óf blauw)
+  Rood (kies uit zwart, rood óf blauw)
 
   #### Je focus:
-  responsive (kies uit responsive óf surface plane)
+  Surface plane (kies uit responsive óf surface plane)
  
 </details>
 
@@ -36,15 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  https://www.starbucks.nl/nl 
+  https://www.mms.com/nl-nl
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/page1home.png" width="375px" alt="Home pagina met info wat je met m&m's kan doen">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="readme-images/page2shop.png" width="375px" alt="Shop een cadeau pagina">
  
 </details>
 
@@ -56,8 +56,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+Wat klikbaar was, werd duidelijk uitgelegd.
+De screenreader las onnodige afbeeldingen die alleen als versiering van de pagina dienden en dus voor blinden geen nut hadden.
+Sommige afbeeldingen hadden wel een alt-tekst, andere niet.
+Wanneer er iets werd uitgelegd, was het duidelijk.
+Ik kon door middel van het toetsenbord door de pagina heen navigeren.
+De volgorde van het navigeren ging goed, maar soms selecteerde hij elke letter. Misschien was dat mijn fout, maar volgens mij hoort dat niet.
+Alleen las hij eerst de afbeelding voor, daarna de titel en vervolgens de paragraaf; dat kan beter.
+De site is op de telefoon weer te geven, maar dit zou nog beter kunnen. Soms staat niet alles netjes recht.
+<img src="readme-images/layout.png" width="375px" alt="layout niet recht">
 
+Op de eerste pagina kon ik geen H1 vinden, wat vreemd is.
+<img src="readme-images/geenh1.png" width="375px" alt="Shop een cadeau pagina">
+
+De koppenstructuur loopt wel van H2 naar H3, enzovoort, maar er is nog steeds geen H1 aanwezig.
+Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het bestaat vooral uit divs en spans.
 </details>
 
 
@@ -68,10 +81,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/page1breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/page2breakdown.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
