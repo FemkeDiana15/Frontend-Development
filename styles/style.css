@@ -9,74 +9,362 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
 	/* startje */
 	--color-text:#111;
 	--color-background:#faf2b4;
+  --font-family: "__elicitScript_5e57d1", "__elicitScript_Fallback_5e57d1";
 }
-
-
 
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
-main{
-	margin: 0;
-}
-p {
-	background-color: purple;
-	color: white;
-	display: flex;
-	justify-content: center;
-	padding: 8px;
-	margin: 0;
+
+/***************HEADER*****************/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FEF2B6; 
+
 }
 
-ul img {
-	width: 50% ;
-	height: 80%;
+p{
+  color: #591F07;
+}
+
+#gift-text {
+  background-color: #DBE850;
+  text-align: center;   
+  margin: 0;
+  padding: 2%;    
+}
+
+#cooling-text {
+  background-color: #8ACEFF;
+  text-align: center;
+  margin: 0;
+  padding: 2%; 
+}
+
+#gift-text a {
+  color: #591F07;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#cooling-text span {
+  font-weight: bold;
+}
+
+nav ul:first-of-type {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+  background-color: #fff; 
+}
+
+nav ul:first-of-type li img {
+  width: 70%; 
+  height: 100%;
+}
+
+nav ul:first-of-type li:first-child {
+  display: flex;
+  justify-content: left;
+  padding: 5%;
+}
+
+nav ul:first-of-type li:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+
+nav ul:first-of-type li:nth-child(3),
+nav ul:first-of-type li:nth-child(4) {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  width: 50%; 
+  height: 90%;
+  padding-top: 4%;
+  padding-right: 3%;
+}
+
+nav ul:nth-of-type(2) {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+	padding: 3%;
+  margin: 0;
+  background-color: #fff; 
+}
+
+nav ul:nth-of-type(2) li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul:nth-of-type(2) img {
+  width: auto;
+  height: 40px;
+  margin: 0;
+}
+
+nav ul:nth-of-type(2) a {
+  text-decoration: none;
+  color: #591F07;        
+  font-weight: bold;    
+  margin: 0;  
+	display: flex;
+	text-align: center;
+}
+
+/***************BODY*****************/
+
+section:nth-of-type(1) {
+  background-color: #FEF2B6;
+}
+
+h1 {
+  margin: 5%;
+  padding-top: 5%;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: #5a1f06;
+  font-weight: bold;  
+}
+
+h2{
+  margin: 5%;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  color: #5a1f06;
+  font-weight: bold;  
+}
+
+/* UL styling */
+.mmpersonaliserenknop {
+  border: 2px solid #5a1f06;
+  list-style: none;
+  margin: 0 auto;        
+  padding: 0;            
+  width: 85%;
+  background: #fff;
+  border-radius: 40px;
+  display: flex;        
+  align-items: center;   
+  gap: 1rem;
+}
+
+
+.mmpersonaliserenknop li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;             
+  border-radius: 40px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.mmpersonaliserenknop li img {
+  width: 2.5rem;
+  height: auto;
+}
+
+.mmpersonaliserenknop li a {
+  display: flex;
+  align-items: center;
+  color: #5a1f06;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;    
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+.sectionverjaardag > a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 85%;              
+  max-width: 90%;         
+  margin: 2% auto;        
+  padding: 1rem 2rem;           
+  border-radius: 40px;       
+  font-weight: bold;
+  font-size: 1.2em;         
+  text-decoration: none;
+  background-color: #FEF2B6; 
+  color: #5a1f06;
+  border: 2px solid #5a1f06;
 }
 
 #bannerimg {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-}
-
-ul #logosize {
-	width: 50%;
-	height: 90%;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-}
-
-li:first-of-type {
-  display: flex;
-
-}
-
-section{
-	background-color:var(--color-background);
-}
-
-.sectionshop img {
-	
-	height: 80%;
-	width: 80%;
-}
-
-.sectionshop p {
-	color: white;
-	display: flex;
+  width: 100%;
+  height: auto;
 }
 
 .sectionshop {
-	background-color: pink;
-	height: 80%;
-	width: 80%
+  position:relative;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 0;
+  border-radius: 15px;
+  width: 90%;
+  margin-bottom: 40%;
+  margin-top: 30%;
+}
+
+/* Verschillende achtergrondkleuren voor elke section */
+.sectionshop:nth-of-type(2) {
+  background-color: #FFABDF; 
+  margin-left: -3%;
+}
+
+.sectionshop:nth-of-type(3) {
+  background-color: #8ACEFF;
+  margin-left: 13%;
+}
+
+.sectionshop:nth-of-type(4) {
+  background-color: #FFD200; 
+  margin-left: -3%;
+}
+
+.sectionshop img:first-of-type {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  bottom: 90%;
+  margin-right: 50%;
+}
+
+.sectionshop img:nth-of-type(2) {
+  width: 80%;
+}
+
+.sectionshop p:first-of-type {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5a1f06;
+  margin: 0.5rem 0;
+}
+
+.sectionshop h2 {
+  font-size: 1.5rem;
+  color: #5a1f06;
+  margin: 0.5rem 0;
+}
+
+.sectionshop a {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  color: #5a1f06;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+
+
+
+.sectiononsdoel{
+  background-color: #FFD200;
+  padding-top: 20%;
+  margin: 0;
+}
+
+.sectiononsdoel p{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+h3{
+  font-size: 1.5rem;
+  color: #591F07;
+  display: flex;
+  text-align: center;
+}
+
+.sectiononsdoel a {
+ display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 85%;              
+  max-width: 90%;         
+  margin: 2% auto;        
+  padding: 1rem 2rem;           
+  border-radius: 40px;       
+  font-weight: bold;
+  font-size: 1.2em;         
+  text-decoration: none;
+  background-color: #fff; 
+  color: #5a1f06;
+}
+
+.sectiononsdoel img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.sectionpersonaliseren{
+  background-color: #F3F6FA ;
+  padding-top: 5%;
+}
+
+.sectionpersonaliseren p {
+  color: #111;
+  margin: 5% ;
+  font-size: 1.2em;
+}
+
+.sectionpersonaliseren > img:nth-of-type(1) {
+  /* styling voor de tweede afbeelding */
+  width: 80%;
+  display: block;
+  border-radius: 50%;
+}
+
+.sectionpersonaliseren ul:last-of-type {
+  display: flex;
+  padding: 1rem ;
+}
+
+.sectionpersonaliseren ul:last-of-type li {
+  list-style: none;
+  flex: 0 0 70%;
+  max-width: 100%;
+  background-color: #F3F6FA;
+  padding: 1rem;
+  text-align: center;
+}
+
+.sectionpersonaliseren ul:last-of-type li img {
+  width: 120%;
+  height: auto;
+}
+
+.sectionpersonaliseren ul:last-of-type li p {
+  font-weight: bold;
+}
+
+.sectionpersonaliseren ul:last-of-type li a {
+  color: #5a1f06;
+  font-weight: bold;
+  font-size: 0.9rem;
 }

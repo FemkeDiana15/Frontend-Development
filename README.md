@@ -101,7 +101,7 @@ Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Het opzetten van de html ging goed en had al een kleine start van de css gemaakt.
 
 
   ### Agenda voor meeting
@@ -117,10 +117,12 @@ Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  -Tip je kan met css animeren 
+  -Carousel bestaat uit ul li 
+  -Input bij de email
+  -Ul li met linkjes in de footer 
+  -Iconenn ook ul list 
+  -Nav toevoegen
 
 </details>
 
@@ -134,7 +136,7 @@ Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Ik heb een groot deel van de css gedaan sommige dingen gingen zeker makkelijker dan andere. De navigatie was lastig odat de postion lastig was.
 
 
   ### Agenda voor meeting
