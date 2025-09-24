@@ -964,35 +964,216 @@ footer > section:last-of-type p {
 
 /***************pagina2*************/
 
-#product div a {
+#product {
+  background-color: var(--color-bg-light);
+}
+#product > section > section:first-of-type a {
   color: var(--color-text-white);
   text-decoration: none;
   font-size: 0.8em;
 }
 
-#product div {
+#product > section > section:first-of-type {
   background-color:#0e74e1;
   padding: 5%;
   padding-top: 10%;
 }
 
-#product div h1{
+#product > section > section:first-of-type h1{
   color: var(--color-text-white);
   text-align: center;
   font-size: 2em;
   padding: 0;
 }
 
-#product div p{
+#product > section > section:first-of-type p{
   color: var(--color-text-white);
   width: 90%;
   padding: 0;
- 
 }
 
-#product div img {
+#product > section > section:first-of-type img {
   display: flex;
   justify-content: center;
   width: 95%;
   margin: 0 auto;
 }
+
+/***************carouselll***************/
+.carouselproduct {
+  background-color: var(--color-bg-light);
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-top: 10% ;
+  margin: 0; 
+  list-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carouselproduct li {
+  padding-top: 10%;
+  flex: 0 0 auto;
+  width: 50%;  
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative; 
+}
+
+.carouselproduct li::before {
+  content: "";
+  position: absolute;
+  top: 45%;  
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;    
+  height: 100px;
+  border-radius: 50%;  
+  z-index: 0; 
+}
+
+.carouselproduct li img {
+  width: 55%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; 
+}
+
+/* Verschillende kleuren per item */
+.carouselproduct li:nth-child(1)::before { background-color: #0e74e1; }
+.carouselproduct li:nth-child(2)::before { background-color: #890046; }
+.carouselproduct li:nth-child(3)::before { background-color: #8ACEFF; }
+.carouselproduct li:nth-child(4)::before { background-color: #FFABDF; }
+
+
+/*************** Product items ***************/
+
+/* Producten grid */
+#product > section:nth-of-type(2) ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Info tekst onder de producten */
+#product > section:nth-of-type(2) > p {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+#product > section:nth-of-type(2) ul li {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  /* Cirkelachtergrond */
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Cirkelachtergrond - GECORRIGEERDE POSITIONING */
+#product > section:nth-of-type(2) ul li::before {
+  content: "";
+  position: absolute;
+  top: 30%; /* Gelijk voor alle producten */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: var(--color-bg-white); 
+  z-index: 0;
+}
+
+/* Productafbeelding */
+#product > section:nth-of-type(2) ul li img:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Badge (eerste afbeelding in li) */
+#product > section:nth-of-type(2) ul li img:first-child {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: auto;
+  z-index: 2;
+}
+
+/* Teksten onder de afbeelding */
+#product > section:nth-of-type(2) ul li h3,
+#product > section:nth-of-type(2) ul li p {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+#product > section:nth-of-type(2) ul li h3 {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0.5rem 0;
+}
+
+#product > section:nth-of-type(2) ul li p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin: 0.5rem 0;
+}
+
+#product > section:nth-of-type(2) ul li span {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/*************** Speciaal item (2e li) ***************/
+
+#product > section:nth-of-type(2) ul li:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  background-color: #0e74e1;
+  border-radius: 5%;
+}
+
+#product > section:nth-of-type(2) ul li:nth-child(2)::before {
+  display: none; /* geen cirkel */
+}
+
+#product > section:nth-of-type(2) ul li:nth-child(2) img {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+#product > section:nth-of-type(2) ul li:nth-child(2) h2 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  color: var(--color-text-white);
+}
+
+#product > section:nth-of-type(2) ul li:nth-child(2) p {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--color-text-white);
+}
+
+
+/*********************/
+/* MEDIA QUERIES     */
+/*********************/
+
