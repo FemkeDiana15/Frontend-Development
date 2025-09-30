@@ -14,7 +14,7 @@
   /* Basis kleuren */
   --color-text: #591F07;
   --color-text-black:#000;
-  --color-text-white: #fff;
+  --color-text-white: #ffffff;
   --color-background: #FEF2B6;
   
   /*boven de header meer info section*/
@@ -29,8 +29,9 @@
   /* Achtergrond kleuren */
   --color-bg-light: #F3F6FA;
   --color-bg-white: #fff;
-  --color-bg-dark: #000;
+  
 }
+
 
 
 
@@ -77,6 +78,260 @@ p{
   font-weight: bold;
 }
 
+/*************/
+/* HAMBURGER MENU */
+/*************/
+
+/* Menu button in de nav */
+nav > ul:first-of-type > li:first-child > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+}
+
+.Menu.toonMenu {
+  transform: translateX(0);
+  background-color: var(--color-bg-white); 
+  margin-right: 20%;
+  width: 95%;
+}
+
+.sluit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+/* Eerste ul (hoofdmenu) */
+.Menu ul:first-of-type {
+  border: none;
+  padding-top: 0;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Eerste li (sluit-button) */
+.Menu ul:first-of-type li:first-child {
+  flex: 1 0 auto;
+  padding-right: 20%;
+}
+
+/* Tweede li (M&M logo) */
+.Menu ul:first-of-type li:nth-child(2) {
+  flex: 0 0 auto;
+  margin: 0 auto; 
+}
+
+/* Derde en vierde li (zoek en winkelwagen) */
+.Menu ul:first-of-type li:nth-child(3),
+.Menu ul:first-of-type li:nth-child(4) {
+  flex: 0 0 auto;
+  padding-left: 5%;
+}
+
+/* Aanpassing voor de links in de eerste ul */
+.Menu ul:first-of-type li a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Specifieke styling voor de sluit-button */
+.Menu ul:first-of-type li:first-child .sluit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Aanpassing voor de afbeeldingen in de eerste ul */
+.Menu ul:first-of-type li img {
+  height: 40px;
+  max-width: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+/************************/
+/* UL ALGEMEEN */
+/************************/
+.Menu ul {
+  list-style: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+  background-color: var(--color-bg-white);
+}
+
+/* Tweede ul (hoofdmenu) */
+.Menu ul:nth-of-type(2) {
+  border: none;
+  padding-top: 0;
+}
+
+.Menu ul:nth-of-type(2) li a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.Menu ul:nth-of-type(2) li a img {
+  height: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+/************ derde ul (knoppen) *************/
+
+.Menu ul:nth-of-type(3) {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.Menu ul:nth-of-type(3) li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-text-black);
+}
+
+.Menu ul:nth-of-type(3) li img {
+  height: 50px;
+  width: auto;
+}
+
+.Menu ul:nth-of-type(3) li a {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+
+/* Vierde ul (support / contact) */
+.Menu ul:nth-of-type(4) {
+  flex-direction: row; 
+  justify-content: space-between;
+  gap: 60%;
+  margin: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: fit-content;
+}
+
+.Menu ul:nth-of-type(4) li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-white);
+  padding: 0;
+  border-radius: 12px;
+  text-align: center;
+  min-height: 50%;
+}
+
+.Menu ul:nth-of-type(4) li img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.Menu ul:nth-of-type(4) li p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin: 0;
+}
+
+
+/* Vijfde ul (account / taal) */
+.Menu ul:nth-of-type(5) {
+  margin-top: 20%;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%;
+}
+
+.Menu ul:nth-of-type(5) li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Menu ul:nth-of-type(5) li:first-child {
+  justify-content: flex-start;
+}
+
+.Menu ul:nth-of-type(5) li:last-child {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.Menu ul:nth-of-type(5) li img {
+  height: 26px;
+}
+
+.Menu ul:nth-of-type(5) li p {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+
+/*************navigatie*******************************/
+
+
 nav ul:first-of-type {
   display: flex;
   list-style: none;
@@ -86,7 +341,7 @@ nav ul:first-of-type {
 }
 
 nav ul:first-of-type li img {
-  width: 70%; 
+  max-width: 80%; 
   height: 100%;
   margin-left: 20%;
 }
@@ -108,33 +363,35 @@ nav ul:first-of-type li:nth-child(4) {
   padding-right: 3%;
 }
 
-nav ul:nth-of-type(2) {
+/* Voor de derde ul in een section */
+.custom-nav {
   list-style: none;
   display: flex;
   justify-content: center;
-	padding: 3%;
+  padding: 3%;
   margin: 0;
-  background-color: var(--color-bg-white); 
+  background-color: var(--color-bg-white);
 }
 
-nav ul:nth-of-type(2) li {
+.custom-nav li {
   margin: 0;
 }
 
-nav ul:nth-of-type(2) img {
-  width: auto;
+.custom-nav img {
+  max-width: 120%;
   height: 40px;
   margin: 0;
 }
 
-nav ul:nth-of-type(2) a {
+.custom-nav a {
   text-decoration: none;
-  color: var(--color-text);     
-  font-weight: bold;    
-  margin: 0;  
-	display: flex;
-	text-align: center;
+  color: var(--color-text);
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  text-align: center;
 }
+
 
 /***************BODY*****************/
 
@@ -185,7 +442,7 @@ h2{
 .mmpersonaliserenknop li img,
 .mmpersonaliserenknop2 li img {
   margin-left: 10%;
-  width: 2.5rem;
+  max-width: 2.5rem;
   height: auto;
   display: block;
 }
@@ -202,6 +459,12 @@ h2{
   border-radius: 40px;
 }
 
+.mmpersonaliserenknop:hover,
+.mmpersonaliserenknop2:hover {
+  background: 
+  linear-gradient(to right, red, yellow, green, blue, purple) bottom / 100% 5px no-repeat,
+  var(--color-bg-white);
+}
 
 .sectionverjaardag > a {
   background-color: var(--color-background);
@@ -219,8 +482,14 @@ h2{
   text-decoration: none;
 }
 
+.sectionverjaardag > a:hover {
+  background-color: var(--color-text); /* verander de achtergrondkleur bij hover */
+  color: var(--color-text-white);      /* optioneel: verander de tekstkleur bij hover */
+   border: 2px solid var(--color-text);
+}
+
 #bannerimg {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -236,7 +505,7 @@ h2{
   margin: 1rem 0;
   border-radius: 15px;
   width: 90%;
-  margin-bottom: 40%;
+  margin-bottom: 20%;
   margin-top: 30%;
 }
 
@@ -255,7 +524,7 @@ h2{
 }
 
 .sectionshop img:first-of-type {
-  width: 40%;
+  max-width: 40%;
   height: auto;
   position: absolute;
   bottom: 90%;
@@ -263,7 +532,7 @@ h2{
 }
 
 .sectionshop img:nth-of-type(2) {
-  width: 80%;
+  max-width: 80%;
 }
 
 .sectionshop p:first-of-type {
@@ -287,6 +556,41 @@ h2{
   font-weight: bold;
 }
 
+.party-popper {
+  cursor: pointer;
+  display: inline-block;
+  transform: scale(1) rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+/* Hover in  animatie naar groot */
+.party-popper:hover {
+  animation: popper-bounce 0.6s ease;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Keyframes voor bounce effect */
+@keyframes popper-bounce {
+  0%   { transform: scale(1) rotate(0deg); }
+  30%  { transform: scale(1.3) rotate(-8deg); }
+  60%  { transform: scale(0.95) rotate(4deg); }
+  100% { transform: scale(1.2) rotate(10deg); }
+}
+
+/*scrolanimatie*/
+.scroll-img-container {
+  position: relative;
+  height: 20vh;       /* hoog genoeg voor scroll */
+  overflow: hidden;
+  margin: 0;
+}
+
+.scroll-img-container img {
+  position: relative;
+  width: 200%;        /* langer dan container zodat ze kunnen bewegen */
+  height: auto;       /* behoud verhoudingen */
+  transition: transform 0.1s linear;
+}
 
 /********Sectiondoel*********/
 .sectiononsdoel {
@@ -328,10 +632,15 @@ h3{
   text-decoration: none;
 }
 
+.sectiononsdoel a:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg-white); /* optioneel: tekstkleur veranderen bij hover */
+}
+
 .sectiononsdoel img {
   display: block;
   margin: 0 auto;
-  width: 80%;
+  max-width: 100%;
 }
 
 /**********personaliseren************/
@@ -353,7 +662,7 @@ h3{
 }
 
 .sectionpersonaliseren ul:last-of-type li img {
-  width: 120%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -363,7 +672,7 @@ h3{
 
 .pijlverwijzing img {
   padding-top: 3%;
-  width: 30%;
+  max-width: 30%;
   height: 35%;
   padding-bottom: 5%;
 }
@@ -427,7 +736,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 .sectionevenement img#weddingfoto {
   display: block;       
   margin: 0 auto;         
-  width: 80%;           
+  max-width: 80%;           
   height: auto;
   object-fit: cover;
   border-top-left-radius: 50%;
@@ -436,7 +745,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 }
 
 .sectionevenement img:nth-of-type(2) {
-  width: 80px;
+  max-width: 80px;
   position: absolute;
   top: 18%;
   left: 75%;
@@ -490,7 +799,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 }
 
 .carouselkado li img {
-  width: 100%;
+  max-width: 100%;
   height: auto; 
   display: block;
   margin: 0 auto;
@@ -541,7 +850,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 }
 
 .sectionvoorgesteld ul li img:nth-child(2) {
-  width: 65%;      
+  max-width: 65%;      
   height: auto;
   display: block;
   margin: 1rem auto;
@@ -550,7 +859,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 
 /* Badge rechtsboven */
 .sectionvoorgesteld ul li img:first-child {
-  width: 50px;
+  max-width: 50px;
   height: auto;
   position: absolute; 
   top: 10px; 
@@ -698,7 +1007,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 
 /***********Sectionbruiloft***************/
 .sectionbruiloft {
-  background-color:var(--color-text-white);;
+  background-color:var(--color-bg-white);;
   margin: 0;
   padding-top: 20%;
 }
@@ -740,6 +1049,7 @@ footer li {
   background-color: var(--color-bg-light);
   color: var(--color-text);
   margin: 0;
+  max-width: 100%;
 }
 
 footer {
@@ -756,7 +1066,7 @@ footer > h2:first-of-type {
 #imgtrustpilot {
   display: block;
   margin: 0 auto 10% auto;
-  width: 50%; 
+  max-width: 50%; 
 }
 
 /* Eerste section in footer: 2x2 layout met % en grotere afbeeldingen */
@@ -770,13 +1080,14 @@ footer > section:first-of-type ul {
 }
 
 footer img:nth-of-type(2) {
-  width: 100%;
+  max-width: 100%;
 }
 
 footer > section:first-of-type ul li:nth-child(odd) img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 50%;
 }
 
 /* Tekst: rechts van afbeelding */
@@ -821,7 +1132,7 @@ footer > section:nth-of-type(2) h2 {
  margin: 0;
 }
 
-footer > section:nth-of-type(2) input[type="email"] {
+input[type="email"] {
   width: 100%;
   padding: 10px 5px;
   border: none;
@@ -832,9 +1143,16 @@ footer > section:nth-of-type(2) input[type="email"] {
   margin-bottom: 15px;
 }
 
-footer > section:nth-of-type(2) input[type="email"]::placeholder {
+input[type="email"]::placeholder {
   color: #595757; 
 }
+
+input[type="email"]:focus {
+  border-color: #f00;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255,0,0,0.5);
+}
+
 
 footer > section:nth-of-type(2) p {
   font-size: 0.9rem;
@@ -844,7 +1162,7 @@ footer > section:nth-of-type(2) p {
 }
 
 footer > section:nth-of-type(2) button {
-  background-color: #ffd700; /* goudkleur */
+  background-color: var(--color-accent-primary); /* goudkleur */
   color: var(--color-text-black);
   border: none;
   padding: 1rem 2rem;
@@ -855,7 +1173,8 @@ footer > section:nth-of-type(2) button {
 }
 
 footer > section:nth-of-type(2) button:hover {
-  background-color: #e6c200; /* donkerder goud bij hover */
+  background-color: var(--color-text); /* donkerder goud bij hover */
+  color: var(--color-text-white);
 }
 
 /***********dropdown**************/
@@ -909,25 +1228,71 @@ footer > section:last-of-type h3:last-of-type {
 }
 
 /* Footer icons*/
-footer .icons {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  margin: 0;
+
+ul.icons {
   list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  justify-content: center;
 }
 
-footer .icons li {
-  margin: 0;
+ul.icons li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent; /* standaard geen cirkel */
+  border: 2px solid transparent; /* optioneel: voor consistentie */
 }
 
-/* Maak de icons iets groter voor betere zichtbaarheid */
-footer .custom-icon svg {
-  width: 80%;
-  height: 80%;
-  fill: var(--color-text);
+/* SVG styling - belangrijk! */
+
+/* Footer icons - Final version */
+ul.icons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  justify-content: start;
 }
 
+ul.icons li {
+  width: 50px;
+  height: 50px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent; /* geen achtergrond standaard */
+  position: relative;
+  overflow: hidden;
+}
+
+ul.icons li svg {
+  width: 70%; /* iets kleiner dan de cirkel */
+  height: 70%;
+  background: transparent;
+  display: block;
+  color: #591F07; /* bruine icons */
+  transition: all 0.3s ease;
+}
+
+/* Alleen bij hover: gele cirkel achtergrond */
+ul.icons li:hover {
+  background: var(--color-accent-primary); /* gele cirkel bij hover */
+  transform: scale(1.1);
+}
+
+ul.icons li:hover svg {
+  color: white; /* witte icons bij hover */
+  transform: scale(1.1);
+}
 
 /* Selecteert de ul in de laatste section van de footer */
 footer > section:last-of-type ul {
@@ -959,10 +1324,8 @@ footer > section:last-of-type p {
 #kadoimg {
   display: flex;
   justify-content: center;
-  width: 90%;
+  max-width: 90%;
 }
-
-/***************pagina2*************/
 
 #product {
   background-color: var(--color-bg-light);
@@ -995,7 +1358,7 @@ footer > section:last-of-type p {
 #product > section > section:first-of-type img {
   display: flex;
   justify-content: center;
-  width: 95%;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -1033,7 +1396,7 @@ footer > section:last-of-type p {
 }
 
 .carouselproduct li img {
-  width: 55%;
+  max-width: 55%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -1078,7 +1441,7 @@ footer > section:last-of-type p {
   box-shadow: none;
 }
 
-/* Cirkelachtergrond - GECORRIGEERDE POSITIONING */
+/* Cirkelachtergrond*/
 #product > section:nth-of-type(2) ul li::before {
   content: "";
   position: absolute;
@@ -1090,6 +1453,12 @@ footer > section:last-of-type p {
   border-radius: 50%;
   background-color: var(--color-bg-white); 
   z-index: 0;
+}
+/* eerste cirkel recht postioneren */
+#product > section:nth-of-type(2) ul li:first-child::before {
+  width: 160px;  
+  height: 160px; 
+  top: 20%;      
 }
 
 /* Productafbeelding */
@@ -1107,7 +1476,7 @@ footer > section:last-of-type p {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 50px;
+  max-width: 50px;
   height: auto;
   z-index: 2;
 }
@@ -1172,8 +1541,200 @@ footer > section:last-of-type p {
   color: var(--color-text-white);
 }
 
+/************Thema knop*********/
+
+.theme-button {
+  position: fixed;
+  top: 50%; /* Verplaats naar het midden van het scherm */
+  right: 10px;
+  z-index: 1000;
+  background: var(--color-accent-primary);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(-50%); /* Centreer verticaal */
+}
+
+.theme-button:hover {
+  background: var(--color-text);
+  color: var(--color-background);
+  transform: translateY(-50%) scale(1.1); /* Behoud verticale centrering bij hover */
+}
+
+/**************Font controls***********/
+.font-controls {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  border: 2px solid #591F07;
+  border-radius: 25px;
+  padding: 8px;
+}
+
+.font-controls {
+  position: fixed;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  border: 2px solid #591F07;
+  border-radius: 25px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.font-controls button {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #591F07;
+  border-radius: 50%;
+  background: #FFD200;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.font-controls button.active {
+  background: #591F07;
+  color: white;
+}
+
+/* Maak de "kleiner" knop uitgezet */
+.font-controls button[data-size="0.8"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ALLE tekst schalen - alleen groter toegestaan */
+body.large-text { 
+  font-size: 1.2em; 
+}
+
+body.large-text h1 { font-size: 2.4rem; }
+body.large-text h2 { font-size: 2.2rem; }
+body.large-text h3 { font-size: 1.8rem; }
+body.large-text p, 
+body.large-text a, 
+body.large-text li, 
+body.large-text span { font-size: 1.2rem; }
+
+/*scrol naar boven knop*/
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #FFD200;
+  border: 2px solid #591F07;
+  color: #591F07;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+#scrollToTop.show {
+  opacity: 1;
+  transform: scale(1);
+}
 
 /*********************/
 /* MEDIA QUERIES     */
 /*********************/
+
+@media (prefers-color-scheme:dark) {
+  :root {
+  --color-text: #ffffff;
+  --color-text-black:#e0e0e0;
+  --color-text-white: #e7e7e7;
+  --color-background: #131312;
+
+  --color-accent-top1header: #596100;
+  --color-accent-top2header: #004270;
+
+  /* Accent kleuren */
+  --color-accent-primary: #FFD200;
+  --color-accent-secondary: #b4006f;
+  --color-accent-tertiary: #005b9d;
+  
+  /* Achtergrond kleuren */
+  --color-bg-light: #373737;
+  --color-bg-white: #000000;
+  }
+}
+
+/* Navigatie iconen */
+@media (prefers-color-scheme: dark) {
+  nav ul:first-of-type li img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+:root[data-theme="halloween"] {
+  --color-text: #ff6600;
+  --color-text-black: #91ff00;
+  --color-text-white: #ff9d00;
+  --color-background: #1A1A1A;
+  
+  --color-accent-top1header: #7B3F00;
+  --color-accent-top2header: #4A235A;
+  
+  --color-accent-primary: #c900c9;
+  --color-accent-secondary: #8B4513;
+  --color-accent-tertiary: #228B22;
+  
+  --color-bg-light: #2D2D2D;
+  --color-bg-white: #000000;
+}
+
+:root[data-theme="halloween"] nav ul:first-of-type li img {
+    filter: brightness(0) invert(10);
+}
+/* Component-specifieke filters */
+:root[data-theme="halloween"] .party-popper{
+  filter: hue-rotate(90deg) brightness(0.8);
+}
+
+:root[data-theme="halloween"] .sectionverjaardag {
+  background: linear-gradient(135deg, #1A1A1A 0%, #7B3F00 100%);
+}
+
+/*verminderd bewegingen animaties*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .party-popper:hover {
+    animation: none;
+    transform: scale(1.1);
+  }
+  
+  .scroll-img-container img {
+    transition: none !important;
+  }
+}
+
 

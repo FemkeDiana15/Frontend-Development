@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "audio"
+		},
+		{
+			"path": "images"
+		},
+		{
+			"path": "readme-images"
+		},
+		{
+			"path": "scripts"
+		},
+		{
+			"path": "styles"
+		}
+	]
+}
