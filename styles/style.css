@@ -1319,7 +1319,7 @@ footer > section:last-of-type p {
   color: var(--color-text-black);
 }
 
-/***************pagina2*************/
+/***************pagina2 producten*************/
 
 #kadoimg {
   display: flex;
@@ -1410,9 +1410,35 @@ footer > section:last-of-type p {
 .carouselproduct li:nth-child(3)::before { background-color: #8ACEFF; }
 .carouselproduct li:nth-child(4)::before { background-color: #FFABDF; }
 
+/***************filteren en sorteren centreren*************/
+
+section > div {
+  display: flex;
+  align-items: center;          
+  justify-content: space-between; /* icoon links, titel midden, aantal rechts */
+  gap: 1rem;                    /* ruimte tussen de elementen */
+  padding: 1rem 0;
+  border-bottom: 2px solid #ddd; 
+  margin: 5%;
+}
+
+section > div img {
+  width: 24px; 
+  height: auto;
+}
+
+section > div h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;                    
+}
+
+section > div p {
+  margin: 0;
+  color: var(--color-text-black);
+}
 
 /*************** Product items ***************/
-
 /* Producten grid */
 #product > section:nth-of-type(2) ul {
   display: grid;
@@ -1479,6 +1505,7 @@ footer > section:last-of-type p {
   max-width: 50px;
   height: auto;
   z-index: 2;
+  padding-bottom: 40%;
 }
 
 /* Teksten onder de afbeelding */
@@ -1491,14 +1518,14 @@ footer > section:last-of-type p {
 
 #product > section:nth-of-type(2) ul li h3 {
   font-size: 1rem;
-  color: var(--color-text);
+  color: var(--color-text-black);
   margin: 0.5rem 0;
+  padding-top: 25%;
 }
 
 #product > section:nth-of-type(2) ul li p {
   font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--color-text);
+  color: var(--color-text-black);
   margin: 0.5rem 0;
 }
 
