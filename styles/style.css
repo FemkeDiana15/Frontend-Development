@@ -9,7 +9,6 @@
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
 :root {
   /* Basis kleuren */
   --color-text: #591F07;
@@ -32,24 +31,19 @@
   
 }
 
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-
-/***************HEADER*****************/
-
+/**************/
+/*   Header   */
+/**************/
 body {
   margin: 0;
   padding: 0;
   background-color: var(--color-background);
   overflow-x: hidden;
   font-family: "Josefin Sans", sans-serif;
+  width: 100%;
 }
 
-p{
+p {
   color: var(--color-text);
   margin-left: 5%;
 }
@@ -78,15 +72,18 @@ p{
   font-weight: bold;
 }
 
-/*************/
-/* HAMBURGER MENU */
-/*************/
-
+/******************/
+/* Hamburger menu */
+/******************/
 /* Menu button in de nav */
 nav > ul:first-of-type > li:first-child > button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.Menu a {
+  text-decoration: none;
 }
 
 .Menu {
@@ -176,7 +173,7 @@ nav > ul:first-of-type > li:first-child > button {
   padding: 0;
 }
 
-/* Aanpassing voor de afbeeldingen in de eerste ul */
+/* Eerste ul */
 .Menu ul:first-of-type li img {
   height: 40px;
   max-width: 80%;
@@ -184,9 +181,6 @@ nav > ul:first-of-type > li:first-child > button {
   margin: 0;
 }
 
-/************************/
-/* UL ALGEMEEN */
-/************************/
 .Menu ul {
   list-style: none;
   margin: 0 0 2rem 0;
@@ -221,8 +215,7 @@ nav > ul:first-of-type > li:first-child > button {
   margin: 0;
 }
 
-/************ derde ul (knoppen) *************/
-
+/* Derde ul (knoppen) */
 .Menu ul:nth-of-type(3) {
   list-style: none;
   margin: 10px;
@@ -254,7 +247,6 @@ nav > ul:first-of-type > li:first-child > button {
   color: var(--color-text);
   text-decoration: none;
 }
-
 
 /* Vierde ul (support / contact) */
 .Menu ul:nth-of-type(4) {
@@ -293,7 +285,6 @@ nav > ul:first-of-type > li:first-child > button {
   margin: 0;
 }
 
-
 /* Vijfde ul (account / taal) */
 .Menu ul:nth-of-type(5) {
   margin-top: 20%;
@@ -328,10 +319,9 @@ nav > ul:first-of-type > li:first-child > button {
   margin: 0;
 }
 
-
-/*************navigatie*******************************/
-
-
+/**************/
+/* Navigatie  */
+/**************/
 nav ul:first-of-type {
   display: flex;
   list-style: none;
@@ -392,9 +382,9 @@ nav ul:first-of-type li:nth-child(4) {
   text-align: center;
 }
 
-
-/***************BODY*****************/
-
+/**************/
+/*    Body    */
+/**************/
 section:nth-of-type(1) {
   background-color: var(--color-background)
 }
@@ -427,10 +417,9 @@ h2{
   border-radius: 40px;
   display: flex;
   align-items: center;
-  gap: 0.6rem;         /* ruimte tussen icoon en tekst */
+  gap: 0.6rem;         
 }
 
-/* list items netjes uitlijnen */
 .mmpersonaliserenknop li,
 .mmpersonaliserenknop2 li {
   padding: 0.1rem;
@@ -438,7 +427,6 @@ h2{
   align-items: center;
 }
 
-/* icoon */
 .mmpersonaliserenknop li img,
 .mmpersonaliserenknop2 li img {
   margin-left: 10%;
@@ -447,7 +435,6 @@ h2{
   display: block;
 }
 
-/* link als blok zodat padding gelijk werkt */
 .mmpersonaliserenknop li a,
 .mmpersonaliserenknop2 li a {
   display: block;
@@ -466,7 +453,7 @@ h2{
   var(--color-bg-white);
 }
 
-.sectionverjaardag > a {
+.gelegenheid > a {
   background-color: var(--color-background);
   color: var(--color-text);
   border: 2px solid var(--color-text);
@@ -482,10 +469,10 @@ h2{
   text-decoration: none;
 }
 
-.sectionverjaardag > a:hover {
-  background-color: var(--color-text); /* verander de achtergrondkleur bij hover */
-  color: var(--color-text-white);      /* optioneel: verander de tekstkleur bij hover */
-   border: 2px solid var(--color-text);
+.gelegenheid > a:hover {
+  background-color: var(--color-text); 
+  color: var(--color-text-white);      
+  border: 2px solid var(--color-text);
 }
 
 #bannerimg {
@@ -493,9 +480,10 @@ h2{
   height: auto;
 }
 
-/*********Section shop *********/
-
-.sectionshop {
+/********************/
+/*   section shop   */
+/********************/
+.uitgelicht {
   position:relative;
   padding: 2rem 1rem;
   display: flex;
@@ -510,20 +498,20 @@ h2{
 }
 
 /* Verschillende achtergrondkleuren voor elke section */
-.sectionshop:nth-of-type(2) {
+.uitgelicht:nth-of-type(2) {
   background-color: var(--color-accent-secondary); 
 }
 
-.sectionshop:nth-of-type(3) {
+.uitgelicht:nth-of-type(3) {
   background-color: var(--color-accent-tertiary);
   margin-left: 10%;
 }
 
-.sectionshop:nth-of-type(4) {
+.uitgelicht:nth-of-type(4) {
   background-color: var(--color-accent-primary); 
 }
 
-.sectionshop img:first-of-type {
+.uitgelicht img:first-of-type {
   max-width: 40%;
   height: auto;
   position: absolute;
@@ -531,24 +519,24 @@ h2{
   margin-right: 70%;
 }
 
-.sectionshop img:nth-of-type(2) {
+.uitgelicht img:nth-of-type(2) {
   max-width: 80%;
 }
 
-.sectionshop p:first-of-type {
+.uitgelicht p:first-of-type {
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--color-text);
   margin: 0.5rem 0;
 }
 
-.sectionshop h2 {
+.uitgelicht h2 {
   font-size: 1.5rem;
   color: var(--color-text);
   margin: 0.5rem 0;
 }
 
-.sectionshop a {
+.uitgelicht a {
   margin-top: 1rem;
   padding: 0.8rem 1.5rem;
   color: var(--color-text);
@@ -556,6 +544,9 @@ h2{
   font-weight: bold;
 }
 
+/***********************/
+/*   animatie/geluid   */
+/***********************/
 .party-popper {
   cursor: pointer;
   display: inline-block;
@@ -577,10 +568,12 @@ h2{
   100% { transform: scale(1.2) rotate(10deg); }
 }
 
-/*scrolanimatie*/
+/**********************/
+/*   scrol animatie   */
+/**********************/
 .scroll-img-container {
   position: relative;
-  height: 20vh;       /* hoog genoeg voor scroll */
+  height: 20vh;      
   overflow: hidden;
   margin: 0;
 }
@@ -588,12 +581,14 @@ h2{
 .scroll-img-container img {
   position: relative;
   width: 200%;        /* langer dan container zodat ze kunnen bewegen */
-  height: auto;       /* behoud verhoudingen */
+  height: auto;       
   transition: transform 0.1s linear;
 }
 
-/********Sectiondoel*********/
-.sectiononsdoel {
+/**********************/
+/*   section ons doel */
+/**********************/
+.onsdoel {
   background-color: var(--color-accent-primary);
   height: auto;
   margin: 0;
@@ -602,7 +597,7 @@ h2{
   border-top-right-radius: 50% 100px;
 }
 
-.sectiononsdoel p{
+.onsdoel p{
   display: flex;
   text-align: center;
   justify-content: center;
@@ -616,7 +611,7 @@ h3{
   text-align: center;
 }
 
-.sectiononsdoel a {
+.onsdoel a {
   background-color: var(--color-bg-white);
   color: var(--color-text);
   display: flex;
@@ -632,45 +627,47 @@ h3{
   text-decoration: none;
 }
 
-.sectiononsdoel a:hover {
+.onsdoel a:hover {
   background-color: var(--color-text);
-  color: var(--color-bg-white); /* optioneel: tekstkleur veranderen bij hover */
+  color: var(--color-bg-white);
 }
 
-.sectiononsdoel img {
+.onsdoel img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 
-/**********personaliseren************/
-.sectionpersonaliseren{
+/******************************/
+/*   section personaliseren   */
+/******************************/
+.personaliseren{
   background-color: var(--color-bg-light);
   padding-top: 5%;
 }
 
-.sectionpersonaliseren ul:last-of-type li a {
+.personaliseren ul:last-of-type li a {
   color: var(--color-text);
   font-weight: bold;
   font-size: 0.9rem;
 }
 
-.sectionpersonaliseren > img:nth-of-type(1) {
+.personaliseren > img:nth-of-type(1) {
   width: 90%;
   border-radius: 50%;
   transform: translateX(-15%); 
 }
 
-.sectionpersonaliseren ul:last-of-type li img {
+.personaliseren ul:last-of-type li img {
   max-width: 100%;
   height: auto;
 }
 
-.sectionpersonaliseren ul:last-of-type li p {
+.personaliseren ul:last-of-type li p {
   font-weight: bold;
 }
 
-.pijlverwijzing img {
+.personaliseren div .pijlverwijzing img {
   padding-top: 3%;
   max-width: 30%;
   height: 35%;
@@ -683,14 +680,16 @@ h3{
 }
 
 .pijlverwijzing p {
-  width: 20vh;
+  width: 15vh;
+  margin-right: 5%;
 }
 
-/*courousel*/
+/************************/
+/*   carousel M&M mix   */
+/************************/
 /* bron Chat GPT https://chatgpt.com/share/68cfca30-4b28-8000-9975-8bd8128baf51*
 en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
-
-.carouselmmmix {
+.carouselmix {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -700,19 +699,19 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   margin: 0;
 }
 
-.carouselmmmix li {
+.carouselmix li {
   flex: 0 0 100%;
   scroll-snap-align: center;
   padding: 1rem;
   text-align: center;
 }
 
-.carouselmmmix img {
+.carouselmix img {
   max-width: 100%;
   border-radius: 10px;
 }
 
-.carouselmmmix a{
+.carouselmix a{
   font-weight: bold;                
   color: var(--color-text);                  
   text-decoration: none;            
@@ -720,12 +719,14 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   padding-bottom: 4px;              
 }
 
-.carouselmmmix p:nth-of-type(2) {
+.carouselmix p:nth-of-type(2) {
   color: var(--color-text-black);
 }
 
-/*********Sectionevenement*********/
-.sectionevenement{
+/*************************/
+/*   Section evenement   */
+/*************************/
+.evenement{
   background-color: var(--color-bg-white);
   padding-top: 50%;
   position: relative;
@@ -733,7 +734,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 }
 
 /* ronde hoeken bron: https://chat.deepseek.com/a/chat/s/a1afc906-77a2-4eb3-bb26-0c1f6c0902db*/
-.sectionevenement img#weddingfoto {
+.evenement img#weddingfoto {
   display: block;       
   margin: 0 auto;         
   max-width: 80%;           
@@ -744,7 +745,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   border: 5px solid #ffc3c2;
 }
 
-.sectionevenement img:nth-of-type(2) {
+.evenement img:nth-of-type(2) {
   max-width: 80px;
   position: absolute;
   top: 18%;
@@ -753,7 +754,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   z-index: 60;
 }
 
-.sectionevenement a{
+.evenement a{
   font-weight: bold;                
   color: var(--color-text);                 
   text-decoration: none;            
@@ -762,7 +763,9 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   margin-left: 5%;
 }
 
-/*carouselkado*/
+/*********************/
+/*   Carousel kado   */
+/*********************/
 /*Bron chat gpt hulp gevraagd https://chatgpt.com/share/68cff800-e318-8000-8369-cd89a7f5485c*/
 .carouselkado {
   display: flex;
@@ -776,7 +779,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   -webkit-overflow-scrolling: touch; /* zorgt voor soepel scrollen op iOS */
 }
 
-/*bron chat gpt voor cirkel als achetrgrond https://chatgpt.com/share/68cffc5f-be78-8000-9472-e17387456a76*/
+/*bron chat gpt voor cirkel als achtergrond https://chatgpt.com/share/68cffc5f-be78-8000-9472-e17387456a76*/
 .carouselkado li {
   flex: 0 0 auto;
   width: 50%;
@@ -821,16 +824,20 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   z-index: 1;
 }
 
-/**********Sectionvoorgesteld***************/
-.sectionvoorgesteld {
+/***************************/
+/*   Section voorgesteld   */
+/***************************/
+.voorgesteld {
   text-align: center;
   background-color: var(--color-bg-light);
   margin: 0;
   padding: 5rem 0;
 }
 
-/* Carouselvoorgesteld */
-.sectionvoorgesteld ul {
+/****************************/
+/*   Carousel voorgesteld   */
+/****************************/
+.voorgesteld ul {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -840,7 +847,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   -webkit-overflow-scrolling: touch;
 }
 
-.sectionvoorgesteld ul li {
+.voorgesteld ul li {
   flex: 0 0 100%;               /* precies 1 item per view */
   scroll-snap-align: start;
   text-align: center;
@@ -849,7 +856,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   position: relative;
 }
 
-.sectionvoorgesteld ul li img:nth-child(2) {
+.voorgesteld ul li img:nth-child(2) {
   max-width: 65%;      
   height: auto;
   display: block;
@@ -858,7 +865,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
 }
 
 /* Badge rechtsboven */
-.sectionvoorgesteld ul li img:first-child {
+.voorgesteld ul li img:first-child {
   max-width: 50px;
   height: auto;
   position: absolute; 
@@ -867,7 +874,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   z-index: 2;
 }
 
-.sectionvoorgesteld ul li p {
+.voorgesteld ul li p {
   width: 60%;
   margin: 0.5rem auto 0;
   font-weight: bold;
@@ -875,17 +882,14 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   text-align: center;
 }
 
-.sectionvoorgesteld ul li span {
+.voorgesteld ul li span {
   color: var(--color-text-black);
 }
 
-
-
-
-
-
-/*************Sectionwerk*****************/
-.sectionwerk {
+/********************/
+/*   Section werk   */
+/********************/
+.werk {
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
@@ -896,7 +900,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   align-items: center;
 }
 
-.sectionwerk h2 {
+.werk h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--color-text);
@@ -904,7 +908,7 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   width: 100%;
 }
 
-.sectionwerk > p {
+.werk > p {
   font-size: 1.2rem;
   color: var(--color-text-black);
   margin-bottom: 2rem;
@@ -926,15 +930,15 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   text-align: center;
 }
 
-.sectionwerk ul.werkinfo:first-of-type {
+.werk ul.werkinfo:first-of-type {
   background: #D70100;
 }
 
-.sectionwerk ul.werkinfo:nth-of-type(2) {
+.werk ul.werkinfo:nth-of-type(2) {
   background: #121661;
 }
 
-.sectionwerk ul.werkinfo:nth-of-type(3) {
+.werk ul.werkinfo:nth-of-type(3) {
   background: #0E74E2;
 }
 
@@ -1004,19 +1008,20 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   color: #5a1f06;
 }
 
-
-/***********Sectionbruiloft***************/
-.sectionbruiloft {
+/************************/
+/*   Section bruiloft   */
+/************************/
+.bruiloft {
   background-color:var(--color-bg-white);;
   margin: 0;
   padding-top: 20%;
 }
-.sectionbruiloft p{
+.bruiloft p{
   color: var(--color-text-black);
   text-align: center;
 }
 
-.sectionbruiloft h2{
+.bruiloft h2{
   color: var(--color-text-black);
   text-align: center;
 }
@@ -1036,8 +1041,9 @@ en https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels*/
   width: auto;
 }
 
-/***************FOOTER*****************/
-
+/**************/
+/*   Footer   */
+/**************/
 /* ik kreeg de footer niet in de hele achtergrond kleur bron: https://chat.deepseek.com/a/chat/s/dd262f30-c985-4402-b57a-b37faef271c1*/
 /* Reset alle achtergrondkleuren in de footer */
 footer, 
@@ -1108,7 +1114,6 @@ footer > section:first-of-type ul li:nth-child(even) p {
   line-height: 1.4;
 }
 
-/* Link styling */
 footer > section:first-of-type a,
 footer > section:nth-of-type(2) a {
   font-weight: bold;                
@@ -1121,15 +1126,9 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Tweede section in footer */
 footer > section:nth-of-type(2) {
   padding: 5%;
   margin: 0;
-}
-
-/* H2 blijft zoals het is */
-footer > section:nth-of-type(2) h2 {
- margin: 0;
 }
 
 input[type="email"] {
@@ -1152,7 +1151,6 @@ input[type="email"]:focus {
   outline: none;
   box-shadow: 0 0 5px rgba(255,0,0,0.5);
 }
-
 
 footer > section:nth-of-type(2) p {
   font-size: 0.9rem;
@@ -1177,7 +1175,9 @@ footer > section:nth-of-type(2) button:hover {
   color: var(--color-text-white);
 }
 
-/***********dropdown**************/
+/**************/
+/*  dropdown  */
+/**************/
 /* Bron https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details */
 summary {
   padding: 5%;
@@ -1227,32 +1227,9 @@ footer > section:last-of-type h3:last-of-type {
   padding: 5%;
 }
 
-/* Footer icons*/
-
-ul.icons {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-  justify-content: center;
-}
-
-ul.icons li {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  background: transparent; /* standaard geen cirkel */
-  border: 2px solid transparent; /* optioneel: voor consistentie */
-}
-
-/* SVG styling - belangrijk! */
-
-/* Footer icons - Final version */
+/**************/
+/*footer icons*/
+/**************/
 ul.icons {
   list-style: none;
   display: flex;
@@ -1261,7 +1238,7 @@ ul.icons {
   justify-content: start;
 }
 
-ul.icons li {
+ul.icons li a {
   width: 50px;
   height: 50px;
   display: flex; 
@@ -1275,11 +1252,11 @@ ul.icons li {
 }
 
 ul.icons li svg {
-  width: 70%; /* iets kleiner dan de cirkel */
+  width: 70%; 
   height: 70%;
   background: transparent;
   display: block;
-  color: #591F07; /* bruine icons */
+  color: #591F07; 
   transition: all 0.3s ease;
 }
 
@@ -1287,11 +1264,7 @@ ul.icons li svg {
 ul.icons li:hover {
   background: var(--color-accent-primary); /* gele cirkel bij hover */
   transform: scale(1.1);
-}
-
-ul.icons li:hover svg {
-  color: white; /* witte icons bij hover */
-  transform: scale(1.1);
+  border-radius: 50%;
 }
 
 /* Selecteert de ul in de laatste section van de footer */
@@ -1319,7 +1292,14 @@ footer > section:last-of-type p {
   color: var(--color-text-black);
 }
 
-/***************pagina2 producten*************/
+/****************************/
+/*   PAGINA 2 (PRODUCTEN)   */
+/****************************/
+
+#product a {
+  text-decoration: none;
+  border-bottom: none;
+}
 
 #kadoimg {
   display: flex;
@@ -1330,6 +1310,7 @@ footer > section:last-of-type p {
 #product {
   background-color: var(--color-bg-light);
 }
+
 #product > section > section:first-of-type a {
   color: var(--color-text-white);
   text-decoration: none;
@@ -1362,7 +1343,9 @@ footer > section:last-of-type p {
   margin: 0 auto;
 }
 
-/***************carouselll***************/
+/************************/
+/*   Carousel product   */
+/************************/
 .carouselproduct {
   background-color: var(--color-bg-light);
   display: flex;
@@ -1410,35 +1393,42 @@ footer > section:last-of-type p {
 .carouselproduct li:nth-child(3)::before { background-color: #8ACEFF; }
 .carouselproduct li:nth-child(4)::before { background-color: #FFABDF; }
 
-/***************filteren en sorteren centreren*************/
-
-section > div {
+/****************************/
+/*   Filteren en sorteren   */
+/****************************/
+#product > section:nth-of-type(2) > div,
+section.filter-sort > div {
   display: flex;
   align-items: center;          
-  justify-content: space-between; /* icoon links, titel midden, aantal rechts */
-  gap: 1rem;                    /* ruimte tussen de elementen */
+  justify-content: space-between; 
+  gap: 1rem;                   
   padding: 1rem 0;
   border-bottom: 2px solid #ddd; 
   margin: 5%;
 }
 
-section > div img {
+#product > section:nth-of-type(2) > div img,
+section.filter-sort > div img {
   width: 24px; 
   height: auto;
 }
 
-section > div h2 {
+#product > section:nth-of-type(2) > div h2,
+section.filter-sort > div h2 {
   font-size: 1.2rem;
   margin: 0;
   flex: 1;                    
 }
 
-section > div p {
+#product > section:nth-of-type(2) > div p,
+section.filter-sort > div p {
   margin: 0;
   color: var(--color-text-black);
 }
 
-/*************** Product items ***************/
+/*********************/
+/*   Product items   */
+/*********************/
 /* Producten grid */
 #product > section:nth-of-type(2) ul {
   display: grid;
@@ -1536,8 +1526,10 @@ section > div p {
   margin-left: 0.5rem;
 }
 
-/*************** Speciaal item (2e li) ***************/
 
+/****************************/
+/*   Speciaal item (2e li)  */
+/****************************/
 #product > section:nth-of-type(2) ul li:nth-child(2) {
   display: flex;
   flex-direction: column;
@@ -1568,11 +1560,12 @@ section > div p {
   color: var(--color-text-white);
 }
 
-/************Thema knop*********/
-
+/******************/
+/*   Thema knop   */
+/******************/
 .theme-button {
   position: fixed;
-  top: 50%; /* Verplaats naar het midden van het scherm */
+  top: 50%; 
   right: 10px;
   z-index: 1000;
   background: var(--color-accent-primary);
@@ -1584,7 +1577,7 @@ section > div p {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  transform: translateY(-50%); /* Centreer verticaal */
+  transform: translateY(-50%);
 }
 
 .theme-button:hover {
@@ -1593,7 +1586,9 @@ section > div p {
   transform: translateY(-50%) scale(1.1); /* Behoud verticale centrering bij hover */
 }
 
-/**************Font controls***********/
+/********************/
+/*  Fonts controls   */
+/********************/
 .font-controls {
   position: fixed;
   top: 40%;
@@ -1607,22 +1602,6 @@ section > div p {
   border: 2px solid #591F07;
   border-radius: 25px;
   padding: 8px;
-}
-
-.font-controls {
-  position: fixed;
-  top: 40%;
-  right: 10px;
-  transform: translateY(-50%);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: white;
-  border: 2px solid #591F07;
-  border-radius: 25px;
-  padding: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .font-controls button {
@@ -1646,7 +1625,7 @@ section > div p {
   cursor: not-allowed;
 }
 
-/* ALLE tekst schalen - alleen groter toegestaan */
+/* alleen groter toegestaan */
 body.large-text { 
   font-size: 1.2em; 
 }
@@ -1659,7 +1638,9 @@ body.large-text a,
 body.large-text li, 
 body.large-text span { font-size: 1.2rem; }
 
-/*scrol naar boven knop*/
+/****************************/
+/*   Scrol naar boven knop  */
+/****************************/
 #scrollToTop {
   position: fixed;
   bottom: 20px;
@@ -1685,7 +1666,6 @@ body.large-text span { font-size: 1.2rem; }
 /*********************/
 /* MEDIA QUERIES     */
 /*********************/
-
 @media (prefers-color-scheme:dark) {
   :root {
   --color-text: #ffffff;
@@ -1734,7 +1714,7 @@ body.large-text span { font-size: 1.2rem; }
 :root[data-theme="halloween"] nav ul:first-of-type li img {
     filter: brightness(0) invert(10);
 }
-/* Component-specifieke filters */
+
 :root[data-theme="halloween"] .party-popper{
   filter: hue-rotate(90deg) brightness(0.8);
 }
@@ -1743,7 +1723,9 @@ body.large-text span { font-size: 1.2rem; }
   background: linear-gradient(135deg, #1A1A1A 0%, #7B3F00 100%);
 }
 
-/*verminderd bewegingen animaties*/
+/*****************************************/
+/*   Verminder bewegingen en aniamties   */
+/*****************************************/
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1764,4 +1746,250 @@ body.large-text span { font-size: 1.2rem; }
   }
 }
 
+/*********************/
+/* SIMPELE DESKTOP STYLES */
+/*********************/
 
+@media (min-width: 1200px) {
+    /* Algemene desktop aanpassingen */
+    body {
+        margin: 0;
+        font-size: 1.1em;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    nav > ul:first-of-type img {
+        width: 30%;
+    }
+
+    nav > ul:first-of-type li:nth-child(3) img,
+    nav > ul:first-of-type li:nth-child(4) img {
+        width: 30%;
+    }
+
+    .Menu {
+        display: none;
+        position: static;
+        transform: none;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        gap: 3rem;
+        padding: 1rem;
+    }
+
+    .Menu ul:first-of-type,
+    .Menu ul:nth-of-type(3),
+    .Menu ul:nth-of-type(4),
+    .Menu ul:nth-of-type(5) {
+        display: none;
+    }
+
+    /* SECTION GELEGENHEID */
+    .gelegenheid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .gelegenheid h1,
+    .gelegenheid h2,
+    .gelegenheid .mmpersonaliserenknop,
+    .gelegenheid > a {
+        grid-column: 1;
+        margin: 0.5rem 0;
+    }
+
+    #bannerimg {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+        width: 100%;
+    }
+
+    /* UITGELICHT SECTIONS - 3 naast elkaar */
+    .uitgelicht {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33.333% - 2rem); /* 3 naast elkaar */
+        margin: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Reset de margin van de derde section */
+    .uitgelicht:nth-of-type(3) {
+        margin-left: 0;
+    }
+
+    /* SCROLL ANIMATIE + ONS DOEL */
+    .scroll-img-container {
+        height: 200px;
+        margin: 0rem 0;
+    }
+
+    .onsdoel {
+        padding: 3rem 2rem;
+    }
+
+    /* SECTION PERSONALISEREN - afbeelding kleiner maken */
+    .personaliseren {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .personaliseren > img:nth-of-type(1) {
+        width: 70%; /* Kleiner dan 90% */
+        transform: none; /* Reset de translate */
+        border-radius: 50%;
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    .personaliseren h2,
+    .personaliseren p,
+    .personaliseren .mmpersonaliserenknop2,
+    .personaliseren .pijlverwijzing {
+        grid-column: 1;
+    }
+
+    .personaliseren .carouselmix {
+        grid-column: 1 / -1; /* Carousel over volledige breedte */
+    }
+
+    .carouselmix {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        overflow-x: visible;
+    }
+
+    .carouselmix li {
+        flex: none;
+        width: 100%;
+    }
+
+    /* SECTION EVENEMENT - bruiloft afbeelding GROTER maken */
+    .evenement {
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .evenement img#weddingfoto {
+        max-width: 100%; /* Veel groter */
+        width: 100%;
+        grid-column: 1;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border: 5px solid #ffc3c2;
+    }
+
+    .evenement img:nth-of-type(2) {
+        max-width: 120px; /* Icoon groter */
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        grid-column: 2;
+        justify-self: start;
+        margin-bottom: 1rem;
+    }
+
+    .evenement h2,
+    .evenement p,
+    .evenement a {
+        grid-column: 2;
+        margin: 0.5rem 0;
+    }
+
+    .evenement .carouselkado {
+        grid-column: 1 / -1; /* Carousel over volledige breedte */
+    }
+
+    .carouselkado {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        overflow-x: visible;
+        margin-top: 2rem;
+    }
+
+    .carouselkado li {
+        flex: none;
+        width: 100%;
+    }
+
+    /* SECTION VOORGESTELD */
+    .voorgesteld ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        overflow-x: visible;
+    }
+
+    .voorgesteld ul li {
+        flex: none;
+        width: 100%;
+    }
+
+    /* SECTION WERK */
+    .werk {
+        padding: 3rem 2rem;
+        text-align: center;
+        display: block;
+    }
+
+    /* BRUTE FORCE - werkt altijd */
+    .werk > ul.werkinfo {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+    }
+
+    /* SECTION BRUILOFT - tekst boven, images onder over halve breedte */
+    .bruiloft {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .bruiloft img {
+        width: 100%;
+    }
+
+    .bruiloft .horizontal-scroll img {
+        width: 100%; /* Vaste breedte */
+        height: auto;
+        max-width: none; /* Reset eventuele max-width restricties */
+    }
+
+    footer > img:first-of-type {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* FOOTER - netjes onder elkaar */
+    footer {
+        padding: 2rem;
+    }
+
+    footer > section:first-of-type ul {
+        display: grid;
+        grid-template-columns: 100px 1fr 100px 1fr;
+        gap: 1rem;
+    }
+}
