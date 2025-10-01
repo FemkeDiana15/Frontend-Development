@@ -1,6 +1,6 @@
 // JavaScript Document
 console.log("hi");
-
+//bron code pen opdracht 2
 // Wacht tot de DOM volledig is geladen
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /*********************/
   /* SCROLL ANIMATIE - ALLEEN OP PAGINA 1 */
   /*********************/
+  // bron https://chatgpt.com/share/68da79a9-e97c-8000-b665-f129f4b9821a
   var scrollContainer = document.querySelector('.scroll-img-container');
   var img1 = document.getElementById('scroll-img1');
   var img2 = document.getElementById('scroll-img2');
@@ -97,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /*********************/
   /* THEMA SWITCHER */
   /*********************/
-
+  //bron voor thema switcher met java https://chat.deepseek.com/share/o5zf4tlzevazs15s2w
   var themeToggle = document.getElementById('theme-toggle');
   var prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -189,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /*********************/
   /* SCROLL TO TOP */
   /*********************/
+  // bron inspiratie https://chat.deepseek.com/share/x8e99sdm5yqjmyd6bz
 
   var scrollBtn = document.getElementById('scrollToTop');
   if (scrollBtn) {
