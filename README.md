@@ -58,19 +58,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevindingen
 Wat klikbaar was, werd duidelijk uitgelegd.
 De screenreader las onnodige afbeeldingen die alleen als versiering van de pagina dienden en dus voor blinden geen nut hadden.
-Sommige afbeeldingen hadden wel een alt-tekst, andere niet.
-Wanneer er iets werd uitgelegd, was het duidelijk.
+Sommige afbeeldingen hadden wel een alt-tekst, andere niet dit maakt het heel verwarend voor mensen met een screenreader.
+Wanneer er iets werd uitgelegd, was het duidelijk maar dat was dus lang niet bij alles.
 Ik kon door middel van het toetsenbord door de pagina heen navigeren.
 De volgorde van het navigeren ging goed, maar soms selecteerde hij elke letter. Misschien was dat mijn fout, maar volgens mij hoort dat niet.
 Alleen las hij eerst de afbeelding voor, daarna de titel en vervolgens de paragraaf; dat kan beter.
-De site is op de telefoon weer te geven, maar dit zou nog beter kunnen. Soms staat niet alles netjes recht.
-<img src="readme-images/layout.png" width="375px" alt="layout niet recht">
+De lettergrote vooral bepaalde kopjes zijn wel wat aan de kleine kant dit zou groter kunnen ik zou dan de optie kunnen geven om het lettertype te kunnen vergrote.
 
-Op de eerste pagina kon ik geen H1 vinden, wat vreemd is.
+Op de eerste pagina kon ik geen H1 vinden, wat vreemd is dit zorgt voor een niet semantische code maar voor screen reader was dit niet heel erg probleem want hij pakt dan gelijk de h2 maar officieel zou het wel goed zijn als er een H1 is.
 <img src="readme-images/geenh1.png" width="375px" alt="Shop een cadeau pagina">
 
-De koppenstructuur loopt wel van H2 naar H3, enzovoort, maar er is nog steeds geen H1 aanwezig.
-Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het bestaat vooral uit divs en spans.
+Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het bestaat vooral uit divs en spans wat totaal niet semantische correct is waardoor het voor de screenreader lastig was om door heen te gaan omdat er gewoon geen structuur aanwezig was doormiddel van sections bijvoorbeeld.
+
+Wat mij heel erg iriteerde persoonlijk was dat zinnen en titels en woorden geen hoofdletters hadden ik vond dit er erg slordig uit zien dus dit ga ik zeker aanpassen wanneer ik de website ga namaken. Hier zie je hoe dat er uitzag op de website  
+<img src="readme-images/geenhoofletters.png" width="375px" alt="geen hoofdletters">
+
+Wanneer ik Reduce Motion op mijn laptop heb ingeschakeld, verdwijnen de animaties en drukke hover-effecten bij afbeeldingen niet. Op de originele pagina verschijnen er bij mouse-over verschillende variaties van dezelfde afbeelding. Dit kan behoorlijk prikkelgevoelig zijn, maar het wordt niet uitgeschakeld, ook al heb je deze instelling op je computer aangezet. Dat vind ik erg jammer. Zie hieronder om welke pagina het gaat.
+<img src="readme-images/imgveranderd.png" width="375px" alt="img veranderd">
+
+
 </details>
 
 
@@ -137,7 +143,7 @@ Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  Ik heb een groot deel van de css gedaan sommige dingen gingen zeker makkelijker dan andere. De navigatie was lastig omdat de position lastig was. Ik heb vooralmet het menu zitten rommelen want dat was een lastige.
+Ik heb een groot deel van de css gedaan sommige dingen gingen zeker makkelijker dan     andere. De navigatie was lastig omdat de position lastig was. Ik heb vooralmet het menu zitten rommelen want dat was een lastige.
 
 
   ### Agenda voor meeting
@@ -153,7 +159,7 @@ Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  -Maak een corousel op jou niveau en maak het niet temoeilijk. Hoeft niet precies er zo uit te zien. 
+  -Maak een corousel op jou niveau en maak het niet temoeilijk. Hoeft niet precies er zo  uit te zien. 
   -Menu button hamburger menu toevoegen
   -De responsive hoeft niet precies zoals die op desktop versie is als hij maar wel er     goed uit ziet. 
   -Display flex hoort niet in de li maar wel in ul het logo kan je meer margin geven.
@@ -173,6 +179,16 @@ Verder zijn er geen specifieke lists of <ul>-elementen te vinden in de code; het
 
   ### Bevindingen
 De screenreader begon bij de bovenste tekst en ging netjes door de eerste pagina heen. Dankzij de alt-teksten die ik had toegevoegd, was het duidelijk welke knoppen het waren, en dit werd ook goed voorgelezen. Bij het menu liep de screenreader ook alles langs, maar dat voelde voor mij wat onduidelijk en een beetje dubbelop, omdat ook de navigatie werd voorgelezen erna. Dit zorgde voor wat verwarring. Verder werkte alles goed: de afbeeldingen werden duidelijk omschreven en in het algemeen was de test dus geslaagd.
+Wat mij opviel, was dat de screenreader niet goed door de carrousels heen ging. Misschien lag dat aan de manier waarop ik het heb gedaan, maar hij pakte alleen de eerste afbeelding en ging daarna meteen door naar de sectie eronder. Dat zou in de toekomst dus beter kunnen worden ingericht. Wat ik ook vreemd vond, is dat het bij de ene carrousel wél werkte, maar bij de andere weer niet.
+
+Voor de toegankelijkheid heb ik daarnaast enkele verbeteringen toegevoegd. Zo is het mogelijk om het lettertype groter te maken, wat belangrijk is voor mensen met een visuele beperking <img src="readme-images/lettergrote.png" alt="lettergrote">.
+
+Ook heb ik reduce motion toegevoegd, zodat animaties en bewegende elementen worden uitgeschakeld voor mensen die daar gevoelig voor zijn. Dit verminder de animatie bij de party popper en de bewegende tekst eronder op mijn pagina. Dit was op de vorige website nog niet aanwezig en is dus een waardevolle toevoeging. Zie hier de om welke animatie het gaat de bewegende tekst <img src="readme-images/scrolanimatie.png" alt="scrolanimatie">.
+
+Verder heb ik bij de inputveld in de footer een rode border toegevoegd als je erop klikt via de focus state. Dit maakt direct duidelijk dat er een geldig e-mailadres moet worden ingevoerd. Zie hier hoe dat er uitziet <img src="readme-images/inputemail.png" alt="inputemail">.
+
+Omdat de pagina op mobiel vrij lang is, heb ik ook een knop rechts onderin geplaatst waarmee gebruikers op elk moment snel terug naar boven kunnen scrollen. Dit is vooral een handige toevoeging voor mobiele gebruikers en draagt eveneens bij aan de toegankelijkheid. Zie hier welke knop dat is die ik heb toegevoegd <img src="readme-images/scrolknop.png" alt="scrolknop">
+
 
 </details>
 
